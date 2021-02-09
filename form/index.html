@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link
+      href="https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1 class="title">
+      <img src="./assets/logo.png" alt="라이틱스 마켓" />
+    </h1>
+    <form action="">
+      <h1>주문하실 지점을 선택해주세요</h1>
+      <div class="dropdown">
+        <button type="button" class="dropdown-toggle">
+          지점을 선택해주세요
+        </button>
+
+        <ul class="dropdown-menu">
+          <li class="dropdown-item">
+            <button type="button" value="1" class="dropdown-option">
+              라이틱스마켓 강남점
+            </button>
+          </li>
+          <li class="dropdown-item">
+            <button type="button" value="2" class="dropdown-option">
+              라이틱스마켓 서초점
+            </button>
+          </li>
+          <li class="dropdown-item">
+            <button type="button" value="3" class="dropdown-option">
+              라이틱스마켓 영등포점
+            </button>
+          </li>
+          <li class="dropdown-item">
+            <button type="button" value="4" class="dropdown-option">
+              라이틱스마켓 신도림점
+            </button>
+          </li>
+          <li class="dropdown-item">
+            <button type="button" value="5" class="dropdown-option">
+              라이틱스마켓 이태원점
+            </button>
+          </li>
+          <li class="dropdown-item">
+            <button type="button" value="6" class="dropdown-option">
+              라이틱스마켓 합정점
+            </button>
+          </li>
+        </ul>
+      </div>
+      <button type="submit" class="next-button" disabled>다음</button>
+    </form>
+    <script src="./app.js"></script>
+  </body>
+</html>
