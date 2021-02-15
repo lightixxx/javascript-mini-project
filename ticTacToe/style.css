@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  padding-bottom: 30px;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+  color: #3f4150;
+  background-color: #f4f7fa;
+}
+
+ul,
+li {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+button {
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+  font-size: 80px;
+  width: 100px;
+  height: 100px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: #3f4150;
+  background: #f4f7fa;
+  border: 1px solid #cccccc;
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+button:focus,
+button:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.title {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.row:nth-child(2) {
+  margin: 3px 0;
+}
