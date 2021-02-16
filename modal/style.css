@@ -206,3 +206,9 @@ a:hover {
 .ghost-button:first-child {
   margin-right: 8px;
 }
+
+footer {
+  font-size: 13px;
+  color: #cccccc;
+  margin-top: 10px;
+}
