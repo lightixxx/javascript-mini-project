@@ -142,3 +142,9 @@ form h1 {
   background-color: #e0e2e7;
   cursor: not-allowed;
 }
+
+footer {
+  font-size: 13px;
+  color: #cccccc;
+  margin-top: 10px;
+}
