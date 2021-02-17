@@ -34,8 +34,10 @@ button {
   background: #f4f7fa;
   border: 1px solid #cccccc;
   cursor: pointer;
-  padding: 20px;
+  /* padding: 20px; */
+  margin: 10px;
   border-radius: 4px;
+
 }
 
 button:focus,
@@ -51,4 +53,10 @@ button:active {
 
 .row:nth-child(2) {
   margin: 3px 0;
+}
+
+.row {
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
 }
