@@ -1,50 +1,55 @@
-const checkAllBtn = document.querySelector('#checkAll')
-const termsOfServiceBtn = document.querySelector('#termsOfService')
-const privacyPolicyBtn = document.querySelector('#privacyPolicy')
-const allowPromotionsBtn = document.querySelector('#allowPromotions')
-const submitBtn = document.querySelector('.next-button')
-const requiredBtn = document.querySelectorAll('.required')
-const form = document.querySelector('form')
+const form = document.querySelector('.signup-form')
+const checkAll = document.querySelector('.form-check-all input')
+const checkboxes = document.querySelectorAll('.form-group input')
+const submitButton = document.querySelector('button')
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
+const agreements = {
+  termsOfService: false,
+  privacyPolicy: false,
+  allowPromotions: false,
+}
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault()
 })
 
-form.addEventListener('click', () => {
-  if(termsOfServiceBtn.checked && privacyPolicyBtn.checked && allowPromotionsBtn.checked) {
-    checkAllBtn.checked = true;
-  } else {
-    checkAllBtn.checked = false;
+checkboxes.forEach(function (item) {
+  item.addEventListener('input', toggleCheckbox)
+})
+
+function toggleCheckbox(e) {
+  const { checked, id } = e.currentTarget
+  if (!checked) {
+    checkAll.checked = false
   }
-})
+  agreements[id] = checked
+  this.parentNode.classList.toggle('active')
+  toggleSubmitButton()
+}
 
-checkAllBtn.addEventListener('click', () => {
-  if(!termsOfServiceBtn.checked || !privacyPolicyBtn.checked || !allowPromotionsBtn.checked) {
-    termsOfServiceBtn.checked = true
-    privacyPolicyBtn.checked = true
-    allowPromotionsBtn.checked = true
-    submitBtn.disabled = false
+function toggleSubmitButton() {
+  const { termsOfService, privacyPolicy } = agreements
+  if (termsOfService && privacyPolicy) {
+    submitButton.removeAttribute('disabled')
   } else {
-    termsOfServiceBtn.checked = false
-    privacyPolicyBtn.checked = false
-    allowPromotionsBtn.checked = false
-    submitBtn.disabled = true
+    submitButton.setAttribute('disabled', '')
   }
-})
+}
 
-termsOfServiceBtn.addEventListener('click', () => {
-  if(termsOfServiceBtn.checked && privacyPolicyBtn.checked) {
-    submitBtn.disabled = false
+checkAll.addEventListener('click', function (e) {
+  const { checked } = e.currentTarget
+  if (checked) {
+    checkboxes.forEach(function (item) {
+      item.checked = true
+      agreements[item.id] = true
+      item.parentNode.classList.add('active')
+    })
   } else {
-    submitBtn.disabled = true
+    checkboxes.forEach(function (item) {
+      item.checked = false
+      agreements[item.id] = false
+      item.parentNode.classList.remove('active')
+    })
   }
+  toggleSubmitButton()
 })
-
-privacyPolicyBtn.addEventListener('click', () => {
-  if(termsOfServiceBtn.checked && privacyPolicyBtn.checked) {
-    submitBtn.disabled = false
-  } else {
-    submitBtn.disabled = true
-  }
-})
-
