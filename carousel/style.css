@@ -29,7 +29,8 @@ button {
   letter-spacing: -0.02em;
   color: #3f4150;
   background: #f4f7fa;
-  border: 1px solid #cccccc;
+  border: none;
+  font-size: 20px;
   cursor: pointer;
   margin: 10px;
   border-radius: 4px;
@@ -39,4 +40,21 @@ button:focus,
 button:active {
   outline: none;
   box-shadow: none;
+}
+
+img {
+  width: 400px;
+}
+
+.container {
+  display: flex;
+}
+
+.carousel {
+  display: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.carousel.show {
+  display: block;
 }
