@@ -23,7 +23,7 @@ li {
   margin-left: 0;
 }
 
-button {
+.btn {
   font-family: 'Spoqa Han Sans Neo', 'sans-serif';
   font-size: 80px;
   width: 100px;
@@ -59,4 +59,19 @@ button:active {
   display: flex;
   /* justify-content: center; */
   /* align-items: center; */
+}
+
+.result-container {
+  color: #ccc;
+  font-weight: 300;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  width: 150px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
