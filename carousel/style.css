@@ -46,8 +46,15 @@ img {
   width: 400px;
 }
 
-.container {
+.carousel-container {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin-bottom: 20px;
 }
 
 .carousel {
